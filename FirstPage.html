@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>First Page</title>
+	    
+	    <style type="text/css">
+	    	label {
+	    		width: 300px;
+	    		float: left;
+	    		background-color:green;
+	    	}
+	    </style>
+	    
+	    <script type="text/javascript"> 
+			function button(){ 
+				// Call function 
+				alert("Button pressed"); 
+			};
+			
+			function loaded(){ 
+				alert("Page loaded"); 
+				console.log("Page loaded");
+			};
+			
+			console.log("First entry"); 
+			console.log("Second entry");
+		</script>
+		
+	    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
+		</script>
+		
+		<style>
+			p {
+				background-color: light-gray; 
+				width: 100px; 
+				border: 1px solid black;
+			} 
+		</style>
+		
+		<script type="text/javascript">
+			$(document).ready(function() { 
+				$( "#para" ).animate({ 
+					width : "70%",
+					opacity : 0.4, 
+					marginLeft : "0.6in", 
+					fontSize : "3em", 
+					borderWidth : "10px"
+				}, 1500 );
+			});
+		</script>
+		
+		<style> 
+			.gray { background-color: gray }
+			.green { background-color: green }
+		</style>
+		
+		<script type="text/javascript">
+			$(document).ready(function() { 
+				$("#jquerybutton").mouseover(function() { 
+					$(this).removeClass("gray"); 
+					$(this).addClass("green"); 
+				});
+				$("#jquerybutton").mouseout(function() { 
+					$(this).removeClass("green");
+					$(this).addClass("gray"); 
+				});
+			});
+		</script>
+		
+	</head>
+	<body onload="loaded()">
+		<p>This is an HTML Page!</p>
+		<label> This is a label testing for CSS!</label>
+		
+		<br/>
+		<h1>First JavaScript</h1> 
+		<script type="text/javascript"> 
+			console.log("I was called");
+		</script>
+		
+		<button type="button" onclick="button()">
+			Call function
+		</button>
+		
+		<br/>
+		<p id="para">Paragraph</p>
+		
+		<br/>
+		<button id="jquerybutton" type="button" class="gray">jQuery Button</button>
+		
+	</body>
+</html>
